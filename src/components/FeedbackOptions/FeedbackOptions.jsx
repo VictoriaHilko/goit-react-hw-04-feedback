@@ -6,20 +6,24 @@ export const FeedbackOptions = ({ options, handleClick }) => {
     const optionsKey = Object.keys(options);
 
     return (
-            <ul className={css.container}>
-                {optionsKey.map((option, index) => {
-                    const label = option.charAt(0).toUpperCase() + option.slice(1);
+        <ul className={css.container}>
+            {optionsKey.map((option, index) => {
+                const label = option.charAt(0).toUpperCase() + option.slice(1);
 
-                    return (
-                        <li key={index}>
-                            <button type="button" className={css.feedbackButton} onClick={() => handleClick(option)}>
-                                {label}
-                            </button>
-                        </li>
-                    );
-                })}
-            </ul>
+                return (
+                    <li key={index}>
+                        <button type="button" className={css.feedbackButton} onClick={() => handleClick(option)}>
+                            {label}
+                        </button>
+                    </li>
+                );
+            })}
+        </ul>
     );
 };
 
 
+FeedbackOptions.propTypes = {
+    options: PropTypes.objectOf(PropTypes.number).isRequired,
+    handleClick: PropTypes.func.isRequired,
+};
