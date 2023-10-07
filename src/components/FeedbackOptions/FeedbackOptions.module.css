@@ -1,0 +1,45 @@
+.container {
+  width: 375px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 20px;
+}
+
+.feedbackButton {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid tomato;
+  border-radius: 10px;
+}
+
+.feedbackButton:hover,
+feedbackButton:focus {
+    border: 2px solid rgb(164, 164, 58);
+    background-color: rgb(164, 164, 58);
+    color: #fff;
+}
+
+li:first-child .feedbackButton:hover,
+li:first-child .feedbackButton:focus {
+    border: 2px solid green;
+    background-color: green;
+    color: #fff;
+}
+
+li:last-child .feedbackButton:hover,
+li:last-child .feedbackButton:focus {
+    border: 2px solid tomato;
+    background-color: tomato;
+    color: #fff;
+}
